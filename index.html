@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Strona firmowa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ==== DANE FIRMY – TU EDYTUJESZ ==== -->
+<script>
+    const nazwaFirmy = "fryzjer-barabar-kucińska";
+    const telefon = "32 297 03 33";
+    const email = "kontakt@firma.pl";
+    const adres = "Kierocińskiej, Sosnowiec";
+</script>
+<!-- ================================== -->
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #121212; /* ciemne tło całej strony */
+    color: #e0e0e0;
+}
+header {
+    background: #0d1b2a; /* ciemny granat */
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+nav {
+    background: #0d1b2a;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav a {
+    text-decoration: none;
+    color: #1e90ff; /* niebieskie linki */
+    font-weight: 600;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+section {
+    max-width: 1100px;
+    background: #1a1a1a; /* ciemne karty */
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+h2 {
+    margin-top: 0;
+    color: #1e90ff;
+}
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 25px;
+}
+.service {
+    background: #222;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+.service h3 {
+    margin-bottom: 10px;
+    color: #1e90ff;
+}
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.contact p {
+    margin: 12px 0;
+}
+footer {
+    background: #0d1b2a;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 25px;
+}
+button {
+    padding: 12px 20px;
+    background: #1e90ff; /* niebieski przycisk */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+button:hover {
+    background: #63b3ed;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1 id="firma"></h1>
+    <p>Nowoczesny zakład fryzjerski</p>
+</header>
+
+<nav>
+    <a href="#o-nas">O nas</a>
+    <a href="#uslugi">Usługi</a>
+    <a href="#cennik">Cennik</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
+<section id="o-nas">
+    <h2>O nas</h2>
+    <p>
+        Jesteśmy nowoczesnym zakładem fryzjerskim oferującym
+        profesjonalne strzyżenie i stylizację.
+        Stawiamy na jakość, styl i komfort klienta.
+    </p>
+</section>
+
+<section id="uslugi">
+    <h2>Usługi</h2>
+    <div class="services">
+        <div class="service">Strzyżenie męskie</div>
+        <div class="service">Strzyżenie damskie</div>
+        <div class="service">Koloryzacja</div>
+        <div class="service">Stylizacja</div>
+    </div>
+</section>
+
+<section id="cennik">
+    <h2>Cennik</h2>
+    <div class="services">
+        <div class="service">
+            <h3>Strzyżenie męskie</h3>
+            <div class="price">40 zł</div>
+        </div>
+        <div class="service">
+            <h3>Strzyżenie damskie</h3>
+            <div class="price">60 zł</div>
+        </div>
+        <div class="service">
+            <h3>Koloryzacja</h3>
+            <div class="price">od 120 zł</div>
+        </div>
+        <div class="service">
+            <h3>Stylizacja</h3>
+            <div class="price">50 zł</div>
+        </div>
+    </div>
+</section>
+
+<section id="kontakt" class="contact">
+    <h2>Kontakt</h2>
+    <p><strong>Telefon:</strong> <span id="tel"></span></p>
+    <p><strong>Email:</strong> <span id="mail"></span></p>
+    <p><strong>Adres:</strong> <span id="adr"></span></p>
+    <button onclick="window.location='mailto:' + email">Napisz do nas</button>
+</section>
+
+<footer>
+    <p id="stopka"></p>
+</footer>
+
+<script>
+document.title = nazwaFirmy;
+document.getElementById("firma").innerText = nazwaFirmy;
+document.getElementById("tel").innerText = telefon;
+document.getElementById("mail").innerText = email;
+document.getElementById("adr").innerText = adres;
+document.getElementById("stopka").innerText = "© 2026 " + nazwaFirmy;
+</script>
+
+</body>
+</html>
