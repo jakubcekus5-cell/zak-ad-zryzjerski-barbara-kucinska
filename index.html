@@ -1,85 +1,107 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>zaklad-fyzjerski-barbara-kucinska</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #0d47a1; /* prestiżowy niebieski */
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background: #1565c0;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 40px;
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-        footer {
-            background: #0d47a1;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 20px;
-            background: #0d47a1;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .service {
-            background: #e3f2fd;
-            padding: 15px;
-            flex: 1 1 200px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .service h3 {
-            margin-top: 0;
-            color: #0d47a1;
-        }
-        .price {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>zaklad-fyzjerski-barbara-kucinska</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212; /* ciemne tło całej strony */
+    color: #e0e0e0;      /* jasny tekst */
+}
+header, footer {
+    background: #0d47a1; /* ciemny niebieski */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+nav {
+    background: #1565c0;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+section {
+    padding: 40px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #1e1e1e; /* ciemniejsze sekcje */
+    border-radius: 10px;
+}
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+.service {
+    background: #1565c0; /* ciemnoniebieskie karty */
+    padding: 15px;
+    flex: 1 1 200px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+}
+.service h3 {
+    margin-top: 0;
+}
+.price {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.btn, a.facebook-link {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #1565c0; /* ciemnoniebieskie przyciski */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.btn:hover, a.facebook-link:hover {
+    background: #0d47a1; /* ciemniejszy przy hover */
+}
+input, select {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background: #2c2c2c;
+    color: #e0e0e0;
+}
+button {
+    background: #0d47a1;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+}
+button:hover {
+    background: #1565c0;
+}
+iframe {
+    border-radius: 10px;
+    margin-top: 15px;
+}
+</style>
 </head>
 <body>
 
 <header>
     <h1>zaklad-fyzjerski-barbara-kucinska</h1>
-    <p>tradycyjny zakład  fryzjerski</p>
+    <p>tradycyjny zakład fryzjerski</p>
 </header>
 
 <nav>
@@ -90,10 +112,8 @@
 
 <section id="o-nas">
     <h2>O nas</h2>
-    <p>
-        Salon fryzjerski z tradycjami działa od 1994r.
-        Szkolimy Uczniów.
-    </p>
+    <p>Salon fryzjerski z tradycjami działa od 1994r.
+    Szkolimy Uczniów.</p>
 </section>
 
 <section id="oferta">
@@ -122,10 +142,10 @@
 <section id="kontakt">
     <h2>Kontakt</h2>
     <p>Email: <a href="mailto:kontakt@barbarakucinska.pl">kontakt@barbarakucinska.pl</a></p>
-    <p>Telefon: <a href="tel:3229703333">32 297 03 33</a></p>
+    <p>Telefon: <a href="tel:322970333">32 297 03 33</a></p>
     <p>Adres: Kierocińskiej 20, Sosnowiec, Poland, 41-200</p>
-    <p>Facebook: <a href="https://www.facebook.com/profile.php?id=1014888937058971" target="_blank">Zakład fryzjerski Barbara Kucińska</a></p>
     <p>Godziny otwarcia: Pon–Pt 10:00–18:00 | Sob 9:00–13:00</p>
+    <p>Facebook: <a class="facebook-link" href="https://www.facebook.com/profile.php?id=1014888937058971" target="_blank">Zakład fryzjerski Barbara Kucińska</a></p>
 
     <h3>Umów wizytę</h3>
     <form onsubmit="return false;">
@@ -140,7 +160,7 @@
         <input type="date">
         <input type="time">
         <button type="submit">Wyślij zgłoszenie</button>
-        <small>* Potwierdzenie wizyty telefonicznie lub przez e-meila</small>
+        <small>* Potwierdzenie wizyty telefonicznie</small>
     </form>
 
     <h3>Jak do nas trafić</h3>
@@ -148,7 +168,6 @@
         src="https://www.google.com/maps?q=Zakład+fryzjerski+Barbara+Kucińska+Kierocińskiej+20+Sosnowiec+41-200+Poland&z=16&output=embed"
         width="100%"
         height="300"
-        style="border:0;"
         allowfullscreen=""
         loading="lazy">
     </iframe>
