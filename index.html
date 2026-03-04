@@ -2,179 +2,187 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>zaklad-fyzjerski-barbara-kucinska</title>
+<title>Zakład Fryzjerski Barbara Kucińska</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #121212; /* ciemne tło całej strony */
-    color: #e0e0e0;      /* jasny tekst */
+    background: #121212;
+    color: #e0e0e0;
 }
+
 header, footer {
-    background: #0d47a1; /* ciemny niebieski */
+    background: #0d47a1;
     color: white;
     text-align: center;
     padding: 20px;
 }
-nav {
-    background: #1565c0;
-    padding: 10px;
-    text-align: center;
-}
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
+
 section {
-    padding: 40px;
-    max-width: 900px;
-    margin: 20px auto;
-    background: #1e1e1e; /* ciemniejsze sekcje */
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #1e1e1e;
     border-radius: 10px;
 }
-.services {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+
+h2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 20px;
 }
-.service {
-    background: #1565c0; /* ciemnoniebieskie karty */
-    padding: 15px;
-    flex: 1 1 200px;
-    border-radius: 8px;
-    text-align: center;
-    color: white;
-}
-.service h3 {
-    margin-top: 0;
-}
-.price {
-    font-weight: bold;
-    margin-top: 10px;
-}
-.btn, a.facebook-link {
-    display: inline-block;
-    padding: 12px 20px;
-    background: #1565c0; /* ciemnoniebieskie przyciski */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-.btn:hover, a.facebook-link:hover {
-    background: #0d47a1; /* ciemniejszy przy hover */
-}
-input, select {
+
+th, td {
+    border: 1px solid #1565c0;
     padding: 10px;
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 15px;
-    border: 1px solid #555;
-    border-radius: 6px;
-    background: #2c2c2c;
-    color: #e0e0e0;
+    text-align: center;
 }
-button {
+
+th {
+    background: #1565c0;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #2a2a2a;
+}
+
+tr:hover {
     background: #0d47a1;
     color: white;
-    border: none;
-    padding: 12px 25px;
-    cursor: pointer;
-    border-radius: 6px;
-    font-weight: bold;
 }
-button:hover {
-    background: #1565c0;
-}
-iframe {
-    border-radius: 10px;
+
+.note {
     margin-top: 15px;
+    font-size: 14px;
 }
 </style>
 </head>
 <body>
 
 <header>
-    <h1>zaklad-fyzjerski-barbara-kucinska</h1>
-    <p>tradycyjny zakład fryzjerski</p>
+    <h1>Zakład Fryzjerski Barbara Kucińska</h1>
+    <p>Profesjonalne usługi fryzjerskie</p>
 </header>
 
-<nav>
-    <a href="#o-nas">O nas</a>
-    <a href="#oferta">Oferta / Cennik</a>
-    <a href="#kontakt">Kontakt</a>
-</nav>
+<section>
+    <h2>Cennik</h2>
 
-<section id="o-nas">
-    <h2>O nas</h2>
-    <p>Salon fryzjerski z tradycjami działa od 1994r.
-    Szkolimy Uczniów.</p>
-</section>
+    <table>
+        <tr>
+            <th>Usługa</th>
+            <th>Krótkie</th>
+            <th>Średnie</th>
+            <th>Długie</th>
+        </tr>
 
-<section id="oferta">
-    <h2>Oferta / Cennik</h2>
-    <div class="services">
-        <div class="service">
-            <h3>Strzyżenie męskie</h3>
-            <div class="price">40 zł</div>
-        </div>
-        <div class="service">
-            <h3>Strzyżenie damskie</h3>
-            <div class="price">60 zł</div>
-        </div>
-        <div class="service">
-            <h3>Koloryzacja</h3>
-            <div class="price">od 120 zł</div>
-        </div>
-        <div class="service">
-            <h3>Stylizacja</h3>
-            <div class="price">50 zł</div>
-        </div>
-    </div>
-    <a class="btn" href="#kontakt">Skontaktuj się</a>
-</section>
+        <tr>
+            <td>Strzyżenie męskie</td>
+            <td>40 zł</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
 
-<section id="kontakt">
-    <h2>Kontakt</h2>
-    <p>Email: <a href="mailto:kontakt@barbarakucinska.pl">kontakt@barbarakucinska.pl</a></p>
-    <p>Telefon: <a href="tel:322970333">32 297 03 33</a></p>
-    <p>Adres: Kierocińskiej 20, Sosnowiec, Poland, 41-200</p>
-    <p>Godziny otwarcia: Pon–Pt 10:00–18:00 | Sob 9:00–13:00</p>
-    <p>Facebook: <a class="facebook-link" href="https://www.facebook.com/profile.php?id=1014888937058971" target="_blank">Zakład fryzjerski Barbara Kucińska</a></p>
+        <tr>
+            <td>Strzyżenie damskie</td>
+            <td>60 zł</td>
+            <td>70 zł</td>
+            <td>80 zł</td>
+        </tr>
 
-    <h3>Umów wizytę</h3>
-    <form onsubmit="return false;">
-        <input type="text" placeholder="Imię">
-        <input type="tel" placeholder="Telefon">
-        <select>
-            <option>Strzyżenie męskie</option>
-            <option>Strzyżenie damskie</option>
-            <option>Koloryzacja</option>
-            <option>Stylizacja</option>
-        </select>
-        <input type="date">
-        <input type="time">
-        <button type="submit">Wyślij zgłoszenie</button>
-        <small>* Potwierdzenie wizyty telefonicznie</small>
-    </form>
+        <tr>
+            <td>Modelowanie włosów</td>
+            <td>40 zł</td>
+            <td>50 zł</td>
+            <td>60 zł</td>
+        </tr>
 
-    <h3>Jak do nas trafić</h3>
-    <iframe
-        src="https://www.google.com/maps?q=Zakład+fryzjerski+Barbara+Kucińska+Kierocińskiej+20+Sosnowiec+41-200+Poland&z=16&output=embed"
-        width="100%"
-        height="300"
-        allowfullscreen=""
-        loading="lazy">
-    </iframe>
+        <tr>
+            <td>Upięcia włosów</td>
+            <td>-</td>
+            <td>120 zł</td>
+            <td>150 zł</td>
+        </tr>
+
+        <tr>
+            <td>Fryzura ślubna</td>
+            <td>-</td>
+            <td>200 zł</td>
+            <td>250 zł</td>
+        </tr>
+
+        <tr>
+            <td>Mycie głowy</td>
+            <td>20 zł</td>
+            <td>20 zł</td>
+            <td>20 zł</td>
+        </tr>
+
+        <tr>
+            <td>Zabieg pielęgnacyjny</td>
+            <td>60 zł</td>
+            <td>80 zł</td>
+            <td>100 zł</td>
+        </tr>
+
+        <tr>
+            <td>Farbowanie włosów *</td>
+            <td colspan="3">Do ustalenia</td>
+        </tr>
+
+        <tr>
+            <td>Ondulacja trwała *</td>
+            <td colspan="3">Do ustalenia</td>
+        </tr>
+
+        <tr>
+            <td>Keratynowe prostowanie</td>
+            <td>250 zł</td>
+            <td>300 zł</td>
+            <td>350 zł</td>
+        </tr>
+
+        <tr>
+            <td>Henna na rzęsy</td>
+            <td colspan="3">30 zł</td>
+        </tr>
+
+        <tr>
+            <td>Henna na brwi</td>
+            <td colspan="3">30 zł</td>
+        </tr>
+
+        <tr>
+            <td>Regulacja brwi</td>
+            <td colspan="3">25 zł</td>
+        </tr>
+
+        <tr>
+            <td>Kosmetyki Montibello</td>
+            <td colspan="3">Dostępne w salonie</td>
+        </tr>
+
+        <tr>
+            <td>Kosmetyki fryzjerskie</td>
+            <td colspan="3">Dostępne w salonie</td>
+        </tr>
+
+    </table>
+
+    <p class="note">
+        * Cena ustalana indywidualnie (do umowy o cenę).
+    </p>
+
 </section>
 
 <footer>
-    <p>© 2026 zaklad-fyzjerski-barbara-kucinska</p>
+    <p>© 2026 Zakład Fryzjerski Barbara Kucińska</p>
 </footer>
 
 </body>
