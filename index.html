@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -13,25 +14,56 @@ body {
     color: #e0e0e0;
 }
 
-header, footer {
+/* ===== ANIMACJA NAGŁÓWKA ===== */
+header {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    animation: slideDown 1s ease;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+footer {
     background: #0d47a1;
     color: white;
     text-align: center;
     padding: 20px;
 }
 
+/* ===== SEKCJE ===== */
 section {
     max-width: 1000px;
     margin: 30px auto;
     padding: 30px;
     background: #1e1e1e;
     border-radius: 10px;
+
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+}
+
+section:nth-of-type(1) { animation-delay: 0.3s; }
+section:nth-of-type(2) { animation-delay: 0.6s; }
+section:nth-of-type(3) { animation-delay: 0.9s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h2 {
     text-align: center;
 }
 
+/* ===== TABELA ===== */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -42,6 +74,7 @@ th, td {
     border: 1px solid #1565c0;
     padding: 10px;
     text-align: center;
+    transition: 0.3s;
 }
 
 th {
@@ -61,6 +94,12 @@ tr:hover {
 .note {
     margin-top: 15px;
     font-size: 14px;
+    text-align: center;
+}
+
+a {
+    color: #90caf9;
+    text-decoration: none;
 }
 </style>
 </head>
@@ -68,8 +107,17 @@ tr:hover {
 
 <header>
     <h1>Zakład Fryzjerski Barbara Kucińska</h1>
-    <p>Profesjonalne usługi fryzjerskie</p>
+    <p>Profesjonalne usługi fryzjerskie w Sosnowcu</p>
 </header>
+
+<section>
+    <h2>O nas</h2>
+    <p>
+        Oferujemy kompleksowe usługi fryzjerskie dla kobiet i mężczyzn.
+        Pracujemy na profesjonalnych kosmetykach Montibello.
+        Zapraszamy do naszego salonu.
+    </p>
+</section>
 
 <section>
     <h2>Cennik</h2>
@@ -82,103 +130,34 @@ tr:hover {
             <th>Długie</th>
         </tr>
 
-        <tr>
-            <td>Strzyżenie męskie</td>
-            <td>40 zł</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-
-        <tr>
-            <td>Strzyżenie damskie</td>
-            <td>60 zł</td>
-            <td>70 zł</td>
-            <td>80 zł</td>
-        </tr>
-
-        <tr>
-            <td>Modelowanie włosów</td>
-            <td>40 zł</td>
-            <td>50 zł</td>
-            <td>60 zł</td>
-        </tr>
-
-        <tr>
-            <td>Upięcia włosów</td>
-            <td>-</td>
-            <td>120 zł</td>
-            <td>150 zł</td>
-        </tr>
-
-        <tr>
-            <td>Fryzura ślubna</td>
-            <td>-</td>
-            <td>200 zł</td>
-            <td>250 zł</td>
-        </tr>
-
-        <tr>
-            <td>Mycie głowy</td>
-            <td>20 zł</td>
-            <td>20 zł</td>
-            <td>20 zł</td>
-        </tr>
-
-        <tr>
-            <td>Zabieg pielęgnacyjny</td>
-            <td>60 zł</td>
-            <td>80 zł</td>
-            <td>100 zł</td>
-        </tr>
-
-        <tr>
-            <td>Farbowanie włosów *</td>
-            <td colspan="3">Do ustalenia</td>
-        </tr>
-
-        <tr>
-            <td>Ondulacja trwała *</td>
-            <td colspan="3">Do ustalenia</td>
-        </tr>
-
-        <tr>
-            <td>Keratynowe prostowanie</td>
-            <td>250 zł</td>
-            <td>300 zł</td>
-            <td>350 zł</td>
-        </tr>
-
-        <tr>
-            <td>Henna na rzęsy</td>
-            <td colspan="3">30 zł</td>
-        </tr>
-
-        <tr>
-            <td>Henna na brwi</td>
-            <td colspan="3">30 zł</td>
-        </tr>
-
-        <tr>
-            <td>Regulacja brwi</td>
-            <td colspan="3">25 zł</td>
-        </tr>
-
-        <tr>
-            <td>Kosmetyki Montibello</td>
-            <td colspan="3">Dostępne w salonie</td>
-        </tr>
-
-        <tr>
-            <td>Kosmetyki fryzjerskie</td>
-            <td colspan="3">Dostępne w salonie</td>
-        </tr>
-
+        <tr><td>Strzyżenie męskie</td><td>40 zł</td><td>-</td><td>-</td></tr>
+        <tr><td>Strzyżenie damskie</td><td>60 zł</td><td>70 zł</td><td>80 zł</td></tr>
+        <tr><td>Modelowanie włosów</td><td>40 zł</td><td>50 zł</td><td>60 zł</td></tr>
+        <tr><td>Upięcia włosów</td><td>-</td><td>120 zł</td><td>150 zł</td></tr>
+        <tr><td>Fryzura ślubna</td><td>-</td><td>200 zł</td><td>250 zł</td></tr>
+        <tr><td>Mycie głowy</td><td>20 zł</td><td>20 zł</td><td>20 zł</td></tr>
+        <tr><td>Zabieg pielęgnacyjny</td><td>60 zł</td><td>80 zł</td><td>100 zł</td></tr>
+        <tr><td>Farbowanie włosów *</td><td colspan="3">Do ustalenia</td></tr>
+        <tr><td>Ondulacja trwała *</td><td colspan="3">Do ustalenia</td></tr>
+        <tr><td>Keratynowe prostowanie</td><td>250 zł</td><td>300 zł</td><td>350 zł</td></tr>
+        <tr><td>Henna na rzęsy</td><td colspan="3">30 zł</td></tr>
+        <tr><td>Henna na brwi</td><td colspan="3">30 zł</td></tr>
+        <tr><td>Regulacja brwi</td><td colspan="3">25 zł</td></tr>
+        <tr><td>Kosmetyki Montibello</td><td colspan="3">Dostępne w salonie</td></tr>
+        <tr><td>Kosmetyki fryzjerskie</td><td colspan="3">Dostępne w salonie</td></tr>
     </table>
 
     <p class="note">
         * Cena ustalana indywidualnie (do umowy o cenę).
     </p>
+</section>
 
+<section>
+    <h2>Kontakt</h2>
+    <p>Adres: Kierocińskiej 20, 41-200 Sosnowiec</p>
+    <p>Telefon: 123 456 789</p>
+    <p>Email: kontakt@barbarakucinska.pl</p>
+    <p>Godziny: Pon–Pt 9:00–18:00 | Sob 9:00–14:00</p>
 </section>
 
 <footer>
